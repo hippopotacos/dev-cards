@@ -7,6 +7,8 @@
 </template>
 
 <style lang="scss" scoped>
+  @import "~/assets/scss/reset.scss";
+  @import "~/assets/scss/mixin.scss";
   @import "~/assets/scss/global.scss";
 
   .footer {
