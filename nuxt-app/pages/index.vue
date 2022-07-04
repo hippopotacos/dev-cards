@@ -29,7 +29,9 @@
       { name: 'twitter:card', content: 'summary_large_image' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/assets/images/favicon.svg' },
+      { rel: 'icon', type: 'image/png', href: '/assets/images/favicon.png' },
+      { rel: 'icon', type: 'image/svg+xml', href: '/assets/images/favicon.svg' },
+      { rel: 'apple-touch-icon', href: '/assets/images/apple-touch-icon.png' },
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap' }
     ],
