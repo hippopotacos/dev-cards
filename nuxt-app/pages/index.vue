@@ -1,11 +1,13 @@
 <script setup>
-  import dayjs from 'dayjs';
-  import utc from 'dayjs/plugin/utc';
-  import timezone from 'dayjs/plugin/timezone';
+  // 日付フォーマット変更
+  import dayjs from 'dayjs'
+  import utc from 'dayjs/plugin/utc'
+  import timezone from 'dayjs/plugin/timezone'
 
-  dayjs.extend(utc);
-  dayjs.extend(timezone);
+  dayjs.extend(utc)
+  dayjs.extend(timezone)
 
+  // 投稿データの取得
   const ctx = useRuntimeConfig()
   const { data } = await useFetch("/blogs", {
     baseURL: ctx.baseURL,
@@ -14,6 +16,7 @@
     },
   })
 
+   // head要素の変更
   useHead({
     title: 'dev-cards.net',
     viewport: 'width=device-width, initial-scale=1',
