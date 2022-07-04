@@ -5,10 +5,6 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "~/assets/scss/reset.scss";
-  @import "~/assets/scss/mixin.scss";
-  @import "~/assets/scss/global.scss";
-  
   .container {
     margin: 0 auto;
     padding: 4.8rem 2rem;

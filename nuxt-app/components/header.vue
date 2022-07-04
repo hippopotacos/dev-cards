@@ -13,9 +13,8 @@
 </template>
 
 <style lang="scss" scoped>
-  @import "~/assets/scss/reset.scss";
-  @import "~/assets/scss/mixin.scss";
   @import "~/assets/scss/global.scss";
+  @import "~/assets/scss/mixin.scss";
   
   .header {
     margin: 0 auto 4.8rem;
