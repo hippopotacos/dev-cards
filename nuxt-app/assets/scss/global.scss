@@ -27,6 +27,10 @@ a:not([class]) {
   }
 }
 
+a:focus-visible {
+  outline: 4px solid $secondary;
+}
+
 .post {
   margin-top: 4rem;
 
