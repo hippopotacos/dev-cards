@@ -1,0 +1,174 @@
+$primary: #1e67d3;
+$secondary: #ffb6b6;
+$tertiary: #09845b;
+$lightgray: #ddd;
+$gray: #555;
+$black: #333;
+$white: #eee;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Helvetica Neue, 'Noto Sans JP', Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, Meiryo, sans-serif;
+  font-size: 1.6rem;
+  background-color: $lightgray;
+}
+
+a:not([class]) {
+  color: $primary;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a:not([class]):hover {
+    opacity: .7;
+    color: $tertiary;
+  }
+}
+
+.post {
+  margin-top: 4rem;
+
+  h1:not([class]) {
+    position: relative;
+    font-size: 3.2rem;
+  }
+
+  h2:not([class]) {
+    position: relative;
+    padding-left: 1.6rem;
+    font-size: 2.4rem;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: .4rem;
+      height: 100%;
+      background-color: $secondary;
+    }
+
+    + * {
+      margin-top: 3.2rem;
+    }
+  }
+
+  h3:not([class]) {
+    + * {
+      margin-top: 2.4rem;
+    }
+  }
+  
+  ul:not([class]) {
+    margin-top: 1.2rem;
+
+    > li {
+      position: relative;
+      padding-left: 1.5em;
+      list-style: none;
+    }
+
+    > li::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: .9rem;
+      left: .4rem;
+      width: .6rem;
+      height: .6rem;
+      border-radius: 50%;
+      background-color: $tertiary;
+    }
+  }
+  
+  dl:not([class]) {
+    padding: 2.4rem;
+    border-radius: 4px;
+    color: $black;
+    background-color: $white;
+
+    > div {
+      display: flex;
+    }
+
+    > div:not(:first-child) {
+      margin-top: .8rem;
+    }
+
+    > div dt {
+      width: 100px;
+      font-weight: bold;
+    }
+
+    > div dd {
+      margin: 0 0 0 1.6rem;
+      width: calc(100% - 10rem - 1.6rem);
+      overflow-wrap: break-word;
+    }
+  }
+
+  b:not([class]),
+  em:not([class]),
+  strong:not([class]) {
+    background-color: $secondary;
+  }
+
+  > * + *,
+  section:not([class]) > *:not([class]) + *:not([class]) {
+    margin-top: 2rem;
+  }
+
+  h1:not([class]),
+  h2:not([class]),
+  h3:not([class]) {
+    margin-top: 5.6rem;
+  }
+
+  pre {
+    padding: 2rem;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    background-color: $black;
+    color: $white;
+  }
+
+  code {
+    overflow-wrap: break-word;
+  }
+}
+
+@media not all and (min-width: 768px) {
+  .post {
+    font-size: 1.4rem;
+    
+    h1:not([class]) {
+      font-size: 2.4rem;
+    }
+
+    h2:not([class]) {
+      font-size: 2rem;
+    }
+
+    h3:not([class]) {
+      font-size: 1.6rem;
+    }
+
+    h1:not([class]),
+    h2:not([class]),
+    h3:not([class]) {
+      margin-top: 4.0rem;
+    }
+
+    ul:not([class]) {
+      > li::before {
+        top: .7rem;
+        left: .4rem;
+        width: .5rem;
+        height: .5rem;
+      }
+    }
+  }
+}
